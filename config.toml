@@ -1,38 +1,46 @@
 baseurl = "https://jnjosh.com/"
 languageCode = "zh-CN"
 title = "MicroBlog"
+hasCJKLanguage = true
+
 theme = "internet-weblog"
 # pygmentsstyle = "emacs"
 Paginate = 10
 
 [author]
 	Handle = "Farenew"
-	# FirstName = ""
+	FirstName = "Farenew"
 	# LastName = "Johnson"
 	AboutPage = "/about"
 	# Location = "Durham, NC"
 	# FlickrID = "87151163@N00"
 
 [params]
-	Description = "Internet weblog of Software (Mac, iOS, Web) Developer, Josh Johnson."
+	Description = "我的微博客"
 	ShowCopyright = true
 	RSSEnabled = true
 	RSSMicropostTitles = false
-	mainSections = [ "posts", "microposts", "photos" ]
+	mainSections = ["microposts", "photos" ]
 
 [taxonomies]
 	tag = "tags"
 	category = "categories"
 	series = "series"
 
-[[menu.main]]
-	name = "Post Archive"
-	weight = 1
-	identifier = "posts"
-	url = "/posts/"
+# [[menu.main]]
+# 	name = "Post Archive"
+# 	weight = 1
+# 	identifier = "posts"
+# 	url = "/posts/"
 
 [[menu.main]]
-	name = "Photos"
+	name = "微博"
 	weight = 2
+	identifier = "microposts"
+	url = "/microposts/"
+
+[[menu.main]]
+	name = "照片"
+	weight = 3
 	identifier = "photos"
 	url = "/photos/"

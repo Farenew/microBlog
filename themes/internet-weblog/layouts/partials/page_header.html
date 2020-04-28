@@ -1,13 +1,13 @@
 <header>
   <nav>
-    <h1><a href="/">@{{ .Site.Author.handle }}</a>’s {{ .Site.Title }}.</h1>
+    <h1><a href="/">{{ .Site.Author.handle }}</a>的微博客</h1>
     <div class="menu">
 		{{ if isset .Site.Params "rsssections" }}
 			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
 			<ul>
 				{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
+					<a class="menu" href="{{.URL}}">{{ .Name }}</a>
 					{{ if in ($.Scratch.Get "sections") .Name }}
 						<a href="{{.URL}}index.xml"><img src="/img/rss.svg" class="rss-icon" /></a>
 					{{ end }}
@@ -19,10 +19,10 @@
 			<ul>
 				{{ range .Site.Menus.main }}
 				<li>
-					<a href="{{.URL}}">{{ .Name }}</a>
+					<a class="menu" href="{{.URL}}">{{ .Name }}</a>
 				</li>
 				{{ end }}
-				{{ with .Site.Author.aboutpage }}<li><a href="{{ . }}">About</a></li>{{ end }}
+				{{ with .Site.Author.aboutpage }}<li><a class="menu" href="{{ . }}">About</a></li>{{ end }}
 			</ul>
       	{{ end }}
     </div>

@@ -82,6 +82,10 @@ nav {
   text-align: center;
 }
 
+a.menu{
+  font-size: 1.2em;
+}
+
 nav ul {
   list-style-type: none;
   margin: 0 auto;
